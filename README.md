@@ -33,8 +33,6 @@ NB: We will end up making the ThinkerBot broadcast it's own WiFi network and con
 ## WiFi Access Point
 https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd/
 
-## MJPEG Streamer
+## MJPG Streamer
 https://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-raspberry-pi
-
-## Auto Run
 
