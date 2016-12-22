@@ -1,0 +1,36 @@
+#!/bin/sh
+# kFreeBSD do not accept scripts as interpreters, using #!/bin/sh and sourcing.
+if [ true != "$INIT_D_SCRIPT_SOURCED" ] ; then
+    set "$0" "$@"; INIT_D_SCRIPT_SOURCED=true . /lib/init/init-d-script
+fi
+### BEGIN INIT INFO
+# Provides:          thinkerbot
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Starts ThinkerBot web sever
+# Description:	     Starts ThinkerBot control web server on 172.24.1.1:5000
+### END INIT INFO
+
+# Author: Mark Scarcella <mark.scarcella@maas.museum>
+#
+# Please remove the "Author" lines above and replace them
+# with your own name if you copy and modif
+
+case "$1" in 
+    start)
+        echo "Starting ThinkerBot"
+	python /home/pi/Desktop/ThinkerServer.py &
+        ;;
+    stop)
+        echo "Stopping ThinkerBot"
+        pkill python
+        ;;
+    *)
+        echo "Usage: /etc/init.d/thinkerbot start|stop"
+        exit 1
+        ;;
+esac
+
+exit 0
