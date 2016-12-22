@@ -29,3 +29,12 @@ Commands can then be sent like `http://localhost:5000/<command>/<value>`. The co
 If your ThinkerBot is also on the same WiFi network as another device, you can send commands py putting in the IP address instead of localhost. 
 
 NB: We will end up making the ThinkerBot broadcast it's own WiFi network and control devices will connect direcly to it.
+
+## WiFi Access Point
+https://frillip.com/using-your-raspberry-pi-3-as-a-wifi-access-point-with-hostapd/
+
+## MJPEG Streamer
+https://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-raspberry-pi
+
+## Auto Run
+
